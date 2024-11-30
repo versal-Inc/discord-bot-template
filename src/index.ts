@@ -24,12 +24,12 @@ export const client = new Client({
 
 // Handle uncaught exceptions (unexpected errors that crash the bot)
 process.on('uncaughtException', (error) => {
-    console.log(`Exceção não capturada`, `${error}`); // Log the error for debugging
+    console.log(`Uncaught Exception: ${error}`); // Log the error for debugging
 });
 
 // Handle unhandled promise rejections (asynchronous errors not properly caught)
 process.on('unhandledRejection', (reason, promise) => {
-    console.log(`Rejeição não tratada`, `${reason}`); // Log the rejection reason for debugging
+    console.log(`Unhandled Rejection: ${reason}`); // Log the rejection reason for debugging
 });
 
 console.log(`
